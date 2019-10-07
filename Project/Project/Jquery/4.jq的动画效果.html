@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src=".."></script>
+		<script>
+			$(function() {
+				// 给btn1派发点击事件
+				$("btn1").click(function() {
+					// Jquary的动画效果
+					// 控制图片
+					// $("#img1").show(5000);
+					
+					// 滑动显示(由上往下)
+					// $("#img1").slideDown();
+					
+					// 
+					$("#img1").fadeIn(5000);	//(opacity:透明:0完全隐藏	1:完全显示)
+
+				});
+				$("#btn2").click(function() {
+					// 隐藏图片
+					// hide()
+					// $("img1").hide(5000);
+					
+					// 隐藏
+					// $("#img1").slideUp();
+					
+					$("#img1").fadeOut(5000);
+
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="显示"  id="btn1"/>
+		<input type="button" value="隐藏"  id="btn2"/>
+		<img src="../img/IMG_20150224_101719.jpg" width="500px" style="display: none;" id="img1"/>
+	</body>
+</html>
