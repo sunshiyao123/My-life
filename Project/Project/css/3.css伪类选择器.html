@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类选择器</title>
+		<style>
+			/* link状态 未被访问状态*/
+			a:link {
+				font-size: 20px;
+				color: #FF0000;
+			}
+			/* visited状态 点住并且松开了*/
+			a:visited {
+				font-size: 35px;
+				color: aqua;
+				text-decoration: none;
+			}
+			/* hover状态 经过状态*/
+			a:hover {
+				font-size: 22px;
+				color:blue;
+				
+				/* 去掉下划线 */
+				text-decoration: none; 
+			}
+			/* active状态 点住不松开*/
+			a:active {
+				font-size: 50px;
+				color:green;
+				text-decoration: underline;
+			}
+			
+		</style>
+		<!-- css伪类选择器 -->
+		
+	</head>
+	<body>
+		<a href="../">超链接</a>
+	</body>
+</html>
