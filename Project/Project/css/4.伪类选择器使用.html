@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 除过表头之外，鼠标经过每一行，背景色变为蓝色 */
+			tbody tr:hover {
+				background-color: #0000FF;
+			}
+			
+			tbody tr td:hover{
+				background-color: #008000;
+				/* 鼠标经过每个单元格，变成小手 */
+				cursor: pointer;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1px" align="center" width="50%" height="100px" cellspacing="0">
+			<thead>
+			<tr align="center">
+				<td>班级</td>
+				<td>姓名</td>
+				<td>成绩</td>
+			</tr>
+			</thead>
+			
+			<!-- 给表格设置拆分 -->
+			<tbody>
+			<tr align="center">
+				<td>1班</td>
+				<td>孙诗尧</td>
+				<td>100</td>
+			</tr>
+			<tr align="center">
+				<td>1班</td>
+				<td>刘苗</td>
+				<td>100</td>
+			</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
