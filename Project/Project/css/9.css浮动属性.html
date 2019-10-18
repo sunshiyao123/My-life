@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1 {
+				width:200px;
+				height: 200px;
+				border: 1px solid #0000FF;
+				background-color: #008000;
+				
+				/* 设置一个浮动 */
+				float: left;
+			}			
+			#d2 {
+				width:200px;
+				height: 200px;
+				border: 1px solid #0000FF;
+				background-color: #FF0000;
+				float: left;
+			}			
+			#d3 {
+				width:200px;
+				height: 200px;
+				border: 1px solid #0000FF;
+				background-color: #00FFFF;
+				float: left;
+			}
+			#clear{
+				/* div1左浮动,想让后边元素都不浮动
+				 clear属性:both;(左右两边都不浮动)*/
+				 clear: both;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id = d1>div1</div>
+		<!-- 此处div不设置内容 -->		<div id = clear></div>
+		<div id = d2>div2</div>
+		<div id = d3>div3</div>
+	</body>
+</html>
