@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 需求:在不使用自定义对象前提下,将方法追加到Array内置对象中
+			/**
+			 * 使用js原始属性protptype
+			 * 1.js所有内置对象中都存在一个原始属性：prototype
+			 * 2.js的内置对象中使用原型追加方法，那么这个额外的方法会自动追加到内置对象
+			 * 3.原型属性的出现就是为了给内置对象追加额外方法使用的
+			 * 
+			 * Array内置对象
+			 * function Array() {
+				 //创建一个原型对象
+				 Array.prototype(原型属性) = new Prototype();
+				 // 自动追加到当前内置对象中
+				 this.search = function(){...}
+
+			 }
+			 
+			 
+			 原型对象
+			 function Prototype() {
+				 this.search = function() {...}
+			 }
+			 
+			 简写格式：
+					给内置对象追加方法
+					内置对象名称.prototype.追加方法名 = function(形参){...}
+			*/
+		   Array.prototype.search = function(target) {
+			   // 遍历数组
+			   for (var i = 0; i < this.length; i++) {
+					if(this[i] == target){
+						return i;
+					}					
+			   }
+			   return -1;
+		   }
+		   
+		   Array.prototype.max = function() {
+			   var max = this[0];
+			   for (var i = 0;i < this.length;i++) {
+				   if(this[i] > max) {
+					   max = this[i];
+				   }
+			   }
+			   return max;
+		   }
+		   
+		   var arr = [1,2,3,4,5];
+		   var index = arr.search(5);
+		   var max = arr.max();
+		   document.write(index+"<br/>"+max);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
