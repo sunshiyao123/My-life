@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**
+			 * window对象：BOM编程中所有对象的顶级对象，省略不写
+			 * 
+			 * open("url","blank/_selft","指定窗口的宽高以及是否显示任务栏")
+			 * 
+			 * 定时器相关的
+			 * 	setInterval("任务()",毫秒数);	每经过多少毫秒重复执行
+			 * 	clearInterval(iIntervalID)
+			 * 
+			 * 	setTimeout("任务()",毫秒数);		经过多少毫秒执行一次
+			 * 
+			 */
+			var testID;
+			function testOpen(){
+				//打开资源文件
+				open("14.广告页面.html","_blank","width:200px;height:200px");
+			}
+			function testRestOpen() {
+				testID = setInterval("testOpen()",1000);
+			}
+			function testClearInterval() {
+				window.clearInterval(testID);
+			}
+			function testTimeOpen() {
+				setTimeout("testOpen()",3000);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="restOpen" onclick="testOpen()" />
+		<input type="button" value="重复弹" onclick="testRestOpen()"/>
+		<input type="button" value="关闭重复" onclick="testClearInterval()" />
+		<input type="button" value="只弹一次" onclick="testTimeOpen()" />
+	</body>
+</html>
