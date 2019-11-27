@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+
+		<script>
+			/**
+			 * 原生js
+			 */
+			function showImg() {
+				//控制哪个标签对象
+				//获取标签对象
+				var img = document.getElementById("img1");
+				//设置display
+				img.style.display = "block";
+				
+				//再经过3s后隐藏广告
+				window.setTimeout("hideImg()",3000);
+			}
+			function init() {
+				//经过3s后弹出广告
+				window.setTimeout("showImg()",3000);
+			}
+			function hideImg() {
+				var img = document.getElementById("img1");
+				
+				img.style.display = "none";
+			}
+		</script>
+		
+	</head>
+	
+	<body onload="init()">
+		<img src="../img/IMG_20150224_101719.jpg" width="100%" 
+			style="display: none;" id="img1"
+		/>
+	</body>
+</html>
