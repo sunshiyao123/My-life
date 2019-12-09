@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**
+			 * string-->整数		parseInt(变量名)
+			 * 注意事项：转换的时候，遇到非数值类型的字符串停止转换
+			 * 
+			 * string-->小数		parseFloat(变量名)
+			 * parseFloat(变量名)
+			 * 
+			 */
+			
+			var a = "10";
+			document.write("转换前a是"+typeof(a));
+			a = parseInt(a);
+			document.write("转换后a是"+typeof(a));
+			
+			/**js运算符
+			 * 算术运算符	js中：true使用1来代替，false使用0来代替
+			 * 比较运算符
+			 * 逻辑运算符
+			 * 三元(三目)运算符	
+			 */
+			
+			/**
+			 *顺序结构语句
+			 *选择结构语句
+			  * switch(表达式) {		
+				  case 值1:		在js中，Case后面的内容可以常量，可以变量，表达式
+					语句
+				  break;
+				  
+				  default:
+					语句
+				  break;
+			  }
+			  * 
+			 */
+			
+			// if选择结构:如果表达式是非空字符串,条件成立。
+			// 如果是非0的整数类型,条件成立.
+			// 如果是一个非null的值,条件成立
+			if("hello") {
+				alert("条件成立...");
+			} else {
+				alert("条件不成立");
+			}
+			
+			// 选择结构switch语句	
+			// default语句可以在任何位置,如果在语句末尾可以省略
+			// js中,case后面的值可以跟变量,常量和表达式(java只能是常量)
+			var i = "b";
+			switch(i) {
+				case "a":
+					document.write("a");
+					break;
+				default:
+					document.write("无");
+					break;
+				case "b":
+					document.write("b");
+					break;
+			}
+			
+			// 循环结构语句
+			for(var i = 0;i < 3;i++) {
+				alert("hello<br />");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
