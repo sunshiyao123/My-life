@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**
+			 * for-in语句类似于Java中的增强for循环
+			 * Java：迭代器：遍历集合：接口Iterator
+			 */
+			// 
+			var arr = [1,2,3,4]
+			for(var i in arr) {
+				document.write(arr[i] + "<hr />")
+			}
+			
+			// 定义一个对象,不能带数据类型
+			function Person(name,age) {
+				this.age = age;
+				this.name = name;
+			}
+			// 创建一个对象
+			var p = new Person("刘苗",18);
+			for(var j in p) {
+				document.write(p[j] + "<hr/>")
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
