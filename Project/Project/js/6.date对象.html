@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/** 
+			 * js内置对象--Date
+			 * 获取系统时间年份/月份/月份中的日期 时分秒
+			 * 
+			 */
+			
+			// 创建日期对象
+			var date = new Date();
+			document.write(date+"<hr />");
+			// 获取年份
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			document.write(year+"年"+(month+1)+"月"+day+"日");
+			document.write("<hr />");
+			document.write(date.getHours()+":"+date.getMinutes()+":"+date.getSeconds());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
