@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<script>
+			/**
+			 * 1.创建时间对象
+			 * 2.拼接时间字符串
+			 * 3.获取span标签对象 id="spanTip"
+			 * 4.设置span标签对象innerHTML属性/innerText
+			 * 5.设置定时器
+			 */
+			function getNewDate() {
+				// 设置日期对象
+				var date = new Date();
+				// 拼接字符串
+				var dateStr = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"&nbsp;&nbsp"
+				+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+				// 获取标签对象
+				var span = document.getElementById("spanTip");
+				// 设置span标签对象innerHTML属性/innerText(动态添加文本内容)
+				span.innerHTML = "<h2>"+dateStr+"</h2>";
+			}
+			/**
+			 * 	设置一个定时器
+			 * window.setInterval("任务()",毫秒值)：每经过多少毫秒后重复任务
+			 * window.setTimeout("任务()",毫秒值)：经过几秒后执行一次
+			 */
+			setInterval("getNewDate()",1000);
+		</script>
+		当前系统时间为:<span id="spanTip"></span>
+	</body>
+</html>
