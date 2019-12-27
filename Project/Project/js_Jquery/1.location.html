@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+			location.href属性:改变当前的url地址(页面跳转 超链接/open()/href)
+				reload():重载页面(刷新)
+				
+			javaweb(页面跳转		servlet+jsp)
+					请求转发
+					重定向
+		 -->
+		 <script>
+			 function btn() {
+				 //使用location.href属性		location:window下子对象
+				 window.location.href = "1.广告页面.html"
+			 }
+			 function btn2() {
+				 window.location.reload();
+			 }
+		 </script>
+	</head>
+	<body>
+		<a href="1.广告页面.html">超链接</a>
+		<button onclick="btn()">执行跳转</button>
+		<button onclick="btn2()">刷新</button>
+	</body>
+</html>
