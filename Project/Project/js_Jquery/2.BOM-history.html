@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**
+			 * back:从历史列表中装入前一个URL
+			 * forward:从历史列表中装入下一额URL
+			 * go:从历史列表中装入URL
+			 * 		go(1):等价于forward()
+			 * 		go(-1):等价于back()
+			 */
+			function btnForward() {
+				// window.history.forward();
+				window.history.go(1);
+			}
+		</script>
+	</head>
+	<body>
+		<a href="1.广告页面.html">超链接</a>
+		<button onclick="btnForward()">前进</button>
+	</body>
+</html>
