@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<img src="" />
+			<a href="#"></a>
+		</form>
+		<form>
+			<img src="" />
+			<a href="#"></a>
+			<a href="#"></a>
+		</form>
+		<script>
+			/**
+			 * 标签对象
+			 * document对象属性
+			 * all:返回页面中所有的标签对象，标签列表
+			 * forms:获取当前页面中所有form标签对象，返回列表
+			 * images:获取当前页面中所有图像标签，返回列表（先后顺序）
+			 * links:获取所有的href属性的标签对象，返回列表
+			 */
+			var nodeList = document.links;
+			for(var i = 0;i < nodeList.length;i++) {
+				alert(nodeList[i].nodeName);//获取标签对象名称
+			}
+		</script>
+	</body>
+</html>
