@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<form>
+			<a href="../">超链接</a><input type="button" value="按钮" />
+		</form>
+		<form>
+			<a href="../">跳转</a><input type="text" />
+		</form>	
+		<script>
+		/**
+		 * 节点关系的属性：
+		 * parentNode：父节点	
+		 * childNodes：所有的子节点		
+		 * firstChild：第一个子节点
+		 * lastChild：最后一个子节点		
+		 * nextSibling：下一个兄弟节点	
+		 * previousSibling：上一个兄弟节点
+		 * 
+		 * html解析还是xml解析：空格换行是当前文本内容进行解析的
+		 * 
+		 * childNodes,firstChild,lastChild都有节点类型
+		 * 节点对象.nodeType:节点类型
+		 * 标签对象：1		标签名称(大写)
+		 * 空格换行：3		#text
+		 * html注释：8		#comment
+		 */
+		//获取第一个a节点对象
+		var aNode = document.links[0];
+		alert(aNode.nodeName);
+		//获取aNode的父节点对象
+		var formNode = aNode.parentNode;
+		alert(formNode.nodeName);
+		//获取formNode下所有子节点
+		var childNodeLists = formNode.childNodes;
+		 alert(childNodeLists.length)
+		 for(var i = 0;i < childNodeLists.length;i++) {
+			 //筛选出节点类型为1的
+			 if(childNodeLists[i].nodeType == 1) {
+				document.write("节点名称是:"+childNodeLists[i].nodeName+"，节点类型是"+childNodeLists[i].nodeType+"<br />");
+			}
+		 }
+		 
+		 //获取第二个a节点对象
+		 var aNode = document.links[1]
+		 //aNode获取下一个兄弟节点
+		 var next = aNode.nextSibling;
+		 //获取上一个
+		 var previous = next.previousSibling;
+	</script>
+	</body>
+
+</html>
