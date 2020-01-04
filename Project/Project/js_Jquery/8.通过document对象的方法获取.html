@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**
+			 * 4种方式获取
+			 * getElementById("id属性值"):通过id属性值获取
+			 * 特点：id属性值在当前html一定是唯一的
+			 * getElementsByName("name属性值"):通过name属性值获取标签对象标签
+			 * getElementsByTagName("标签属性"):通过标签名称获取
+			 * getElementsByClassName("class属性值"):通过class属性值获取标签对象，返回的标签对象列表
+			 */
+			function textBlur() {
+					//通过id属性值获取标签对象
+					var userName = document.getElementById("user");
+					alert(userName.value);
+					//通过name属性获取
+					var userName = document.getElementByName("name")[0];
+					alert(userName.value);
+					//通过标签名称获取
+					var userName = document.getElementsByTagName("input")[0];
+					alert(userName.value);
+					//通过class属性值获取标签对象
+					var userName = document.getElementsByClassName("className")[0];
+			}
+				
+		</script>
+	</head>
+	<body>
+		<!-- 
+			失去焦点事件：onblur
+		 -->
+		用户名：<input type="text"  class="className" onblur="textBlur()" id="user" name="name"/>
+	</body>
+</html>
