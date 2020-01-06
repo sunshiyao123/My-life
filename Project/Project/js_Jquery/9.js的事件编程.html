@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#div {
+				width:200px;
+				height: 200px;
+				border: 1px solid black;
+			}
+		</style>
+		
+		<!-- 
+			Java中GUI
+			JS/Javaweb--SAX解析
+				事件编程三要素：
+					确定事件源：确定标签
+					事件监听器：编写事件函数(业务处理)
+					绑定或者注册事件监听器
+						通过特定事件把函数进行绑定
+						
+						
+			
+			常用事件分类
+				按键抬起事件：
+					onkeyup(模拟百度搜索)
+				点击相关事件：
+					onclick:单击
+					ondblclick:双击
+				焦点相关事件：
+					onfocus:获取焦点
+					onblur:失去焦点		**
+				选项卡发生变化事件：(select下拉菜单)省市联动
+					onchange事件		**
+				鼠标相关事件：
+					onmouseover:鼠标经过事件
+					onmouseout:鼠标移出事件
+				页面载入事件:一般在body后面指定onload事件
+					将body中内容全部加载完毕再去执行函数
+					
+					
+					
+				placeholder="请输入用户名"//h5属性，可以在输入后消失输入框内字体
+		 1-->
+		
+		 <script>
+			 // 事件监听器
+			 function btnClick() {
+				 alert("点击了");
+			 }
+			 function ondblClick() {
+				 alert("双击了");
+			 }
+			 function textFocus() {
+				var userName = document.getElementById("userName");
+				//设置userName代表的input标签里的属性
+				userName.value = "";
+				
+				 
+			 }
+			 
+			 function textBlur() {
+				var userName = document.getElementById("userName").value;
+				var span = document.getElementById("span_Tip");
+				if(userName!="孙诗尧") { //换成js的正则表达式
+					// span设置innerHTML属性
+					span.innerHTML="用户名可用".fontcolor("greeyellow");
+				} else {
+					span.innerHTML = "用户名被占用".fontcolor("red");
+				}
+			}
+			
+			// 选项卡发生变化
+			function testChange() {
+				// 获取标签对象,同时内容
+				var jiGuan = document.getElementById("jiguan").value;
+				// 获取id为city的标签对象
+				var city = document.getElementById("city");
+				// 判断选择了哪个省份
+				if (jiGuan == "陕西省") {
+					var arr = ["西安市","韩城市","咸阳市"];
+					for (var i = 0; i < arr.length; i++) {
+						// 将<option value = "城市">拼接到city的select标签后
+						city.innerHTML+="<option value='"+arr[i]+"'>"+arr[i]+"</option>";
+					}
+				}
+				
+			}
+			function init() {
+				alert("加载完毕");
+			}
+			
+			function mouseOver() {
+				alert("鼠标经过");
+			}
+			function mouseOut() {
+				alert("鼠标移出");
+			}
+		 </script>
+	</head>
+	<body onload="init()">
+		<!-- buttun：事件源 -->
+		<button onclick="btnClick()">点我试试</button>
+		<button ondblclick="ondblClick()">双击一下</button>
+		
+		<input type="text" onfocus="textFocus()" onblur="textBlur()" id="userName" value="请输入用户名" size=25" />
+		<span id="span_Tip" ></span><br />
+		
+		籍贯
+		<select id="jiguan" onchange="testChange()">
+			<option value="请选择">请选择</option>
+			<option value="陕西省">陕西省</option>
+			<option value="陕西省">陕西省</option>
+			<option value="陕西省">陕西省</option>
+			<option value="陕西省">陕西省</option>
+		</select>
+		<select id="city"></select>
+			<!-- <option value="城市"></option> -->
+		<div id="div" onmouseover="mouseOver()" onmouseout="mouseOut()"></div>
+	</body>
+</html>
